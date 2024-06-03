@@ -11,7 +11,7 @@ const Home = () => {
     isPending,
     error,
   } = useFetch(
-    `https://ras02-eas-14.azuremicroservices.io/getAll?page=${currentPage}`
+    `https://ras02-eas-14.azuremicroservices.io/article/getAll?page=${currentPage}`
   );
 
   useEffect(() => {

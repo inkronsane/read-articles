@@ -1,11 +1,13 @@
 {
   "name": "read-articles-website",
   "version": "0.1.0",
+  "homepage": "https://inkronsane.github.io/read_articles/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "cors": "^2.8.5",
     "js-cookie": "^3.0.5",
     "json-server": "^1.0.0-alpha.23",
     "react": "^18.3.1",
@@ -15,6 +17,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

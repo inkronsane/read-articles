@@ -15,6 +15,7 @@ const useFetch = (url) => {
         const response = await fetch(url, {
           headers: {
             Authorization: `Bearer ${token}`,
+            "Access-Control-Allow-Origin": "https://inkronsane.github.io/", // Додано заголовок CORS
           },
           signal: abortCont.signal,
         });
