@@ -35,6 +35,9 @@ const ArticleDetails = () => {
   const handleArticleDelete = () => {
     fetch(`https://ras02-eas-14.azuremicroservices.io/article/delete/${id}`, {
       method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
     }).then(() => {
       navigate("/");
     });
