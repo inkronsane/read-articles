@@ -1,17 +1,18 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const SearchBar = () => {
   const [author, setAuthor] = useState("");
   const [title, setTitle] = useState("");
   const [tags, setTags] = useState([]);
+  const navigate = useNavigate();
 
   const handleSearch = () => {
     const encodedAuthor = encodeURIComponent(author);
     const encodedTitle = encodeURIComponent(title);
     const encodedTags = tags.map((tag) => encodeURIComponent(tag)).join(",");
     const searchUrl = `/results/search?author=${encodedAuthor}&title=${encodedTitle}&tags=${encodedTags}`;
-    window.location.href = searchUrl;
+    navigate(searchUrl);
   };
 
   return (

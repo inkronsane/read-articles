@@ -26,7 +26,7 @@ function App() {
               <Route path="/registration" element={<Registration />} />
               <Route path="/users/:userId" element={<UserProfilePage />} />
               <Route path="/code" element={<VerifyCode />} />
-              <Route path="/results/*" element={<SearchResultsPage />} />{" "}
+              <Route path="/results/*" element={<SearchResultsPage />} />
               {/* Оновлений маршрут для результатів пошуку */}
               <Route path="*" element={<NotFound />} />
             </Routes>
