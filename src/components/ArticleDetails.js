@@ -32,17 +32,18 @@ const ArticleDetails = () => {
     setCurrentPage(pageNumber);
   };
 
-  const handleArticleDelete = () => {
-    const token = Cookies.get("jwt");
-    fetch(`https://ras02-eas-14.azuremicroservices.io/article/delete/${id}`, {
-      method: "DELETE",
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    }).then(() => {
-      navigate("/");
-    });
-  };
+  // const handleArticleDelete = () => {
+  //   const token = Cookies.get("jwt");
+
+  //   fetch(`https://ras02-eas-14.azuremicroservices.io/article/delete/${id}`, {
+  //     method: "DELETE",
+  //     headers: {
+  //       Authorization: `Bearer ${token}`,
+  //     },
+  //   }).then(() => {
+  //     navigate("/");
+  //   });
+  // };
 
   const handleArticleUpdate = (updatedArticle) => {
     const token = Cookies.get("jwt");
@@ -111,7 +112,7 @@ const ArticleDetails = () => {
                   <button onClick={() => setIsEditing(true)}>
                     Edit Article
                   </button>
-                  <button onClick={handleArticleDelete}>Delete Article</button>
+                  {/* <button onClick={handleArticleDelete}>Delete Article</button> */}
                 </>
               )}
             </>
