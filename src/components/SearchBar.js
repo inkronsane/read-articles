@@ -10,7 +10,7 @@ const SearchBar = () => {
     const encodedAuthor = encodeURIComponent(author);
     const encodedTitle = encodeURIComponent(title);
     const encodedTags = tags.map((tag) => encodeURIComponent(tag)).join(",");
-    const searchUrl = `/results?author=${encodedAuthor}&title=${encodedTitle}&tags=${encodedTags}`;
+    const searchUrl = `/results/search?author=${encodedAuthor}&title=${encodedTitle}&tags=${encodedTags}`;
     window.location.href = searchUrl;
   };
 
