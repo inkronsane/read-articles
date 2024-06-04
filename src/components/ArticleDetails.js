@@ -33,6 +33,7 @@ const ArticleDetails = () => {
   };
 
   const handleArticleDelete = () => {
+    const token = Cookies.get("jwt");
     fetch(`https://ras02-eas-14.azuremicroservices.io/article/delete/${id}`, {
       method: "DELETE",
       headers: {
